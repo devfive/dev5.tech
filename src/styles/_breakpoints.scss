@@ -1,0 +1,62 @@
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    /**
+     * Breakpoint - mobiles portrait
+     */
+    @media all
+    and (max-width: 767px)
+    and (max-aspect-ratio: 12/9) {
+      @content ;
+    }
+  }
+  @else if $point == mobile-landscape {
+    /**
+     * Breakpoint - mobiles landscape
+     */
+    @media all
+    and (max-width: 767px)
+    and (min-aspect-ratio: 12/9) {
+      @content ;
+    }
+  }
+  @else if $point == tablet {
+    /**
+     * Breakpoint - tablets portrait
+     */
+    @media all
+    and (min-width: 768px)
+    and (max-width: 1023px)
+    and (max-aspect-ratio: 12/9) {
+      @content ;
+    }
+  }
+  @else if $point == tablet-landscape {
+    /**
+     * Breakpoint - tablets landscape
+     */
+    @media all
+    and (min-width: 768px)
+    and (max-width: 1024px)
+    and (min-aspect-ratio: 12/9) {
+      @content ;
+    }
+  }
+  @else if $point == tablet-desktop {
+    /**
+     * Breakpoint - tablets and desktops
+     */
+    @media all
+    and (min-width: 768px) {
+      @content ;
+    }
+  }
+  @else if $point == desktop {
+    /**
+     * Breakpoint - desktops
+     */
+    @media all
+    and (min-width: 1025px) {
+      @content ;
+    }
+  }
+}

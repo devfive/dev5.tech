@@ -7,7 +7,8 @@ const exclude = /node_modules/;
 
 module.exports = {
   entry: [
-    'babel-polyfill',
+    // 'babel-polyfill',
+    './src/index',
   ],
   output: {
     filename: 'app-[hash:7].js',

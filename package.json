@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "clean": "node_modules/rimraf/bin.js docs/index.html docs/assets/**",
+    "clean": "node_modules/rimraf/bin.js docs/index.html docs/assets/** docs/app-*.js*",
     "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --display-error-details",
     "build": "npm run clean && webpack --config webpack.config.dist.js --progress",
     "test": "echo \"TBD\" && exit 1"
@@ -15,7 +15,8 @@
   "keywords": [],
   "author": "dev5.tech",
   "dependencies": {
-    "babel-polyfill": "^6.0.16"
+    "babel-polyfill": "^6.0.16",
+    "normalize.css": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",

@@ -1,0 +1,7 @@
+@import 'breakpoints';
+@import 'variables';
+
+.container {
+  width: 100%;
+  padding: $gridGutterWidth / 2;
+}

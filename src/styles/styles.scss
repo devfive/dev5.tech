@@ -1,0 +1,41 @@
+@import '~normalize.css';
+@import 'variables';
+@import 'breakpoints';
+@import 'container';
+@import 'hero';
+
+
+body {
+  background: #1d1f26;
+  background: -moz-linear-gradient(left,  #1d1f26 0%, #28251a 100%);
+  background: -webkit-linear-gradient(left,  #1d1f26 0%,#28251a 100%);
+  background: linear-gradient(to right,  #1d1f26 0%,#28251a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1f26', endColorstr='#28251a',GradientType=1 );
+
+  font-family: 'Raleway', sans-serif;
+  font-size: $fontSize;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+
+  &:after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 40px;
+    height: 1px;
+    background-color: $colorAccent;
+    transition: $transitionDefault;
+  }
+
+  &:hover {
+    &:after {
+      width: 100px;
+    }
+  }
+}
